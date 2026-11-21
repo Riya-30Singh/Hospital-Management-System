@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Doctor Appointment</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">✚ MediNova</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+                <li><a href="#myAppointments">My Bookings</a></li>
+            </ul>
+
+            <a href="#appointments" class="nav-btn">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tagline">"Your Wellness, Our Commitment."</span>
+
+            <h1>Meet the Minds <br>
+                <span>Behind Your Care..</span></span>
+            </h1>
+
+            <p>
+                Find trusted healthcare professionals, explore medical
+                specialties, and schedule your next consultation with ease.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#doctors" class="btn primary">Find a Doctor</a>
+                <a href="#services" class="btn secondary">Explore Services</a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <h3>Expert</h3>
+                    <p>Doctors</p>
+                </div>
+                <div>
+                    <h3>Easy</h3>
+                    <p>Booking</p>
+                </div>
+                <div>
+                    <h3>Care</h3>
+                    <p>For Everyone</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="doctor-illustration">🧑‍⚕️</div>
+            <div class="floating-card">
+                <span>💚</span>
+                <div>
+                    <strong>Your Health Matters</strong>
+                    <p>Book your consultation today</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="section" id="doctors">
+        <div class="section-heading">
+            <span>OUR SPECIALISTS</span>
+            <h2>Meet Our Doctors</h2>
+            <p>Choose the right specialist for your healthcare needs.</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="doctorSearch"
+                placeholder="Search by doctor name or specialization...">
+        </div>
+
+        <div class="doctor-grid" id="doctorGrid">
+
+            <article class="doctor-card">
+                <div class="doctor-avatar">👨‍⚕️</div>
+                <h3>Dr. Vaibhav Singh</h3>
+                <p class="speciality">Cardiologist</p>
+                <p>Heart and cardiovascular specialist.</p>
+                  <span>Consultation Fees: ₹500</span>
+                <div class="doctor-info">
+                    <span>⭐ 4.9</span>
+                    <span>8+ Years Experience</span>
+                  
+                </div>
+                <button class="book-doctor" data-doctor="Dr. Vaibhav Singh">
+                    Book Appointment
+                </button>
+            </article>
+
+            <article class="doctor-card">
+                <div class="doctor-avatar">👩‍⚕️</div>
+                <h3>Dr. Aradhya</h3>
+                <p class="speciality">Dermatologist</p>
+                <p>Skin, hair and skincare specialist.</p>
+                <span>Consultation Fees: ₹800</span>
+                <div class="doctor-info">
+                    <span>⭐ 4.8</span>
+                    <span>6+ Years Experience</span>
+                </div>
+                <button class="book-doctor" data-doctor="Dr. Aradhya">
+                    Book Appointment
+                </button>
+            </article>
+
+            <article class="doctor-card">
+                <div class="doctor-avatar">👨‍⚕️</div>
+                <h3>Dr. Raghav Avasthi</h3>
+                <p class="speciality">Neurologist</p>
+                <p>Brain and nervous system specialist.</p>
+                <span>Consultation Fees: ₹1000</span>
+                <div class="doctor-info">
+                    <span>⭐ 4.9</span>
+                    <span>10+ Years Experience</span>
+                </div>
+                <button class="book-doctor" data-doctor="Dr. Raghav Avasthi">
+                    Book Appointment
+                </button>
+            </article>
+
+            <article class="doctor-card">
+                <div class="doctor-avatar">👩‍⚕️</div>
+                <h3>Dr. Nishtha</h3>
+                <p class="speciality">Pediatrician</p>
+                <p>Healthcare specialist for children.</p>
+                <span>Consultation Fees: ₹600</span>
+                <div class="doctor-info">
+                    <span>⭐ 4.7</span>
+                    <span>7+ Years Experience</span>
+                </div>
+                <button class="book-doctor" data-doctor="Dr. Nishtha">
+                    Book Appointment
+                </button>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="noResults" hidden>
+            No doctors found. Try another search.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+        <div class="section-heading">
+            <span>WHAT WE OFFER</span>
+            <h2>Our Healthcare Services</h2>
+            <p>Healthcare support designed around your needs.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🩺</div>
+                <h3>General Checkup</h3>
+                <p>Routine health checkups and medical consultations.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">❤️</div>
+                <h3>Heart Care</h3>
+                <p>Cardiac consultations and heart health assessments.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧪</div>
+                <h3>Lab Tests</h3>
+                <p>Basic diagnostic and laboratory testing services.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Online Consultation</h3>
+                <p>Convenient online consultations with doctors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="section appointment-section" id="appointments">
+        <div class="section-heading">
+            <span>BOOK YOUR VISIT</span>
+            <h2>Schedule an Appointment</h2>
+            <p>Fill in your details to request an appointment.</p>
+        </div>
+
+        <form id="appointmentForm" class="appointment-form">
+
+            <div class="form-group">
+                <label for="patientName">Full Name</label>
+                <input type="text" id="patientName"
+                    placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="patientEmail">Email Address</label>
+                <input type="email" id="patientEmail"
+                    placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="patientPhone">Phone Number</label>
+                <input type="tel" id="patientPhone"
+                    placeholder="10-digit phone number"
+                    pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+
+            <div class="form-group">
+                <label for="doctorSelect">Select Doctor</label>
+                <select id="doctorSelect" required>
+                    <option value="">Choose a doctor</option>
+                    <option>Dr. Vaibhav Singh   </option>
+                    <option>Dr. Aradhya</option>
+                    <option>Dr. Raghav Avasthi</option>
+                    <option>Dr. Nishtha</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="appointmentDate">Appointment Date</label>
+                <input type="date" id="appointmentDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="appointmentTime">Preferred Time</label>
+                <select id="appointmentTime" required>
+                    <option value="">Choose a time</option>
+                    <option>09:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>02:00 PM</option>
+                    <option>03:00 PM</option>
+                    <option>04:00 PM</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="reason">Reason for Visit</label>
+                <textarea id="reason"
+                    placeholder="Briefly describe your reason for the visit..."
+                    rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn primary submit-btn">
+                Confirm Appointment →
+            </button>
+
+            <p id="formMessage" class="form-message" role="status"></p>
+        </form>
+    </section>
+
+    <!-- My Appointments -->
+    <section class="section" id="myAppointments">
+        <div class="section-heading">
+            <span>YOUR BOOKINGS</span>
+            <h2>My Appointments</h2>
+            <p>View or cancel your appointment requests.</p>
+        </div>
+
+        <div class="booking-list" id="bookingList">
+            <p class="empty-message">No appointments booked yet.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>✚ MediCare</h2>
+        <p>Making healthcare accessible, one appointment at a time.</p>
+        <p class="copyright">
+            © 2026 MediCare. Demo website for educational purposes.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
